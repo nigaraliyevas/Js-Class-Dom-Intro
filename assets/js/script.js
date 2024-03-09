@@ -1,5 +1,5 @@
 'use strict';
-/* class Calc{
+class Calc{
   constructor(num){
     this.num=num;
     this.sum=num;
@@ -26,7 +26,7 @@
   }
 }
 const result = new Calc(50).plus(6).minus(30).multiply(3).divide(2);
-console.log(result.sum); */
+console.log(result.sum);
 
 //task2
 const btnPlus=document.getElementById("btn-plus");
