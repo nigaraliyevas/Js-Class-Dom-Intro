@@ -73,14 +73,12 @@ btnDivide.addEventListener("click",function(){
 // task-3
 //#region NewList
 const items = document.querySelectorAll(".item");
-let newItems = [];
-items.forEach(item => newItems.push(item.innerHTML));
-let res = newItems.filter((value, index, array) => array.indexOf(value) === index);
+let list = Array.from(items).map(value=>value.innerHTML).filter((value, index, array) => array.indexOf(value) === index);
 let newList = document.createElement("ul");
 let newListHeader = document.createElement("h3");
 newListHeader.innerText = "NewList";
 document.body.appendChild(newListHeader);
-res.forEach(item => {
+list.forEach(item => {
   let newItem = document.createElement("li");
   newItem.innerText = item;
   newList.appendChild(newItem);
