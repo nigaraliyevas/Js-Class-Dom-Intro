@@ -1,5 +1,6 @@
 'use strict';
-class Calc{
+//#region chained-methods
+/* class Calc{
   constructor(num){
     this.num=num;
     this.sum=num;
@@ -26,10 +27,11 @@ class Calc{
   }
 }
 const result = new Calc(50).plus(6).minus(30).multiply(3).divide(2);
-console.log(result.sum);
-
-//task2
-const btnPlus=document.getElementById("btn-plus");
+console.log(result.sum); */
+//#endregion
+//task-2
+//#region calculator
+/* const btnPlus=document.getElementById("btn-plus");
 const btnMinus=document.getElementById("btn-minus");
 const btnMultiply=document.getElementById("btn-multiply");
 const btnDivide=document.getElementById("btn-divide");
@@ -66,7 +68,23 @@ btnDivide.addEventListener("click",function(){
   if (num2 === 0) return alert("Cannot divide by zero");
   const res=num1/num2;
   inputResult.value=res;
+}); */
+//#endregion
+// task-3
+//#region NewList
+const items = document.querySelectorAll(".item");
+let newItems = [];
+items.forEach(item => newItems.push(item.innerHTML));
+let res = newItems.filter((value, index, array) => array.indexOf(value) === index);
+let newList = document.createElement("ul");
+let newListHeader = document.createElement("h3");
+newListHeader.innerText = "NewList";
+document.body.appendChild(newListHeader);
+res.forEach(item => {
+  let newItem = document.createElement("li");
+  newItem.innerText = item;
+  newList.appendChild(newItem);
 });
-
-
+document.body.appendChild(newList); 
+//#endregion
 
